@@ -1,13 +1,13 @@
 # Site settings | 网站设置
-title: RainbomSea
-SEOTitle: RainbomSea的博客 | RaimbomSea
+title: eddie
+SEOTitle: eddie的博客 | eddie
 header-img: img/home-bg-he.png
-email: RainbomSea@qq.com
-description: "RainbomSea的博客"
-keyword: "RainbomSea, RainbomSea的博客, rainbom sea, rainbomsea, Python blog"
-url: "http://RainbomSea.github.io"          # your host, for absolute URL
+email: cheng943066069@qq.com
+description: "eddie的博客"
+keyword: "eddie, eddie的博客"
+url: "http://eddie5200.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/RainbomSea/RainbomSea.github.io.git" #code repository | 代码仓库
+github_repo: "https://github.com/eddie5200/eddie5200.github.io.git" #code repository | 代码仓库
 
 
 # Sidebar settings | 侧边栏设置
@@ -20,10 +20,10 @@ sidebar-avatar: /img/head.jpg      # 头像
 
 
 # SNS settings | 社交网络设置
-facebook_username: rainbom.z
-github_username: RainbomSea
-zhihu_username: RainbomSea
-csdn_username: qq_39268193
+#facebook_username: rainbom.z
+github_username: eddie5200
+#zhihu_username: eddie
+#csdn_username: qq_39268193
 
 
 
@@ -63,9 +63,9 @@ gitalk:
   enable: true    # 是否开启Gitalk评论
   clientID: 99ecf1fdc9b7e357ebb7                            #生成的clientID
   clientSecret: 2670daea0c10372dd0296c371edc5ee4e73db43f    #生成的clientSecret
-  repo: RainbomSea.github.io    #仓库名称
-  owner: RainbomSea    # github用户名
-  admin: RainbomSea
+  repo: eddie5200.github.io    #仓库名称
+  owner: eddie5200    # github用户名
+  admin: eddie5200
   distractionFreeMode: true # 是否启用类似FB的阴影遮罩
 
 
@@ -73,7 +73,7 @@ gitalk:
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 9acee03023ad0c6c993dd86df81e2ac8
+#ba_track_id: 9acee03023ad0c6c993dd86df81e2ac8
 
 
 # Featured Tags
@@ -89,18 +89,18 @@ service-worker: true
 
 
 # Friends
-friends: [
-    {
-        title: "GitHub·RainbomSea",
-        href: "http://RainbomSea.github.io"
-    },{
-        title: "CSDN·RainbomSea",
-        href: "https://blog.csdn.net/qq_39268193"
-    },{
-        title: "知乎·RainbomSea",
-        href: "https://www.zhihu.com/people/RainbomSea"
-    },{
-        title: "GitBook·RainbomSea",
-        href: "https://legacy.gitbook.com/@rainbomsea"
-    }
-]
+#friends: [
+#    {
+#       title: "GitHub·eddie",
+#       href: "http://eddie.github.io"
+#   },{
+#       title: "CSDN·eddie",
+#       href: "https://blog.csdn.net/qq_39268193"
+#   },{
+#        title: "知乎·eddie",
+#       href: "https://www.zhihu.com/people/eddie"
+#   },{
+#       title: "GitBook·eddie",
+#       href: "https://legacy.gitbook.com/@rainbomsea"
+#   }
+#   #]

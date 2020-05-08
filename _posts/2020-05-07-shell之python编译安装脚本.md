@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      python的安装部署
+subtitle:   python的安装
+date:       2010-05-07
+author:     eddie
+header-img: img/home-bg-o.jpg
+catalog: true
+tags:
+    - linux之python安装
+---
+
+```
 ## python3的编译安装
 
 ##下载安装包,并解压
@@ -16,3 +29,4 @@ make&&make install
 ##启动，软连接快速启动
 ln -s /usr/local/python3/bin/python3 /usr/bin/python3
 ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
+```

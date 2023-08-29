@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      python的psutil库
+title:      python常用库
 subtitle:   python获取服务器基本监控信息
 date:       2023-08-28
 author:     eddie

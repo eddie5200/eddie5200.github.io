@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      openssh升级
-subtitle:   openssh升级到8.9
+title:      linux常用操作
+subtitle:   openssh升级到9.5
 date:       2023-04-11
 author:     eddie
 header-img: img/home-bg-o.jpg
@@ -12,7 +12,7 @@ tags:
 
 
 ```
-centos7默认openssh是7.4 升级到9.需升级openssl
+centos7默认openssh是7.4 升级到9.5需升级openssl
 
 1.查看版本
 	ssh -V

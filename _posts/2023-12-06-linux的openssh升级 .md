@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      openssh升级
+title:      linux常用操作
 subtitle:   openssh升级到8.9
 date:       2023-04-11
 author:     eddie

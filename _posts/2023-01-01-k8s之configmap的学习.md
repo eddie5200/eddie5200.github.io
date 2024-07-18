@@ -121,7 +121,7 @@ data:
   cache_host: localhost
  ```
 
- ### **三：configmap合并**
+### **三：configmap合并**
 
 ```
 mkdir nginx-conf && cd nginx-conf

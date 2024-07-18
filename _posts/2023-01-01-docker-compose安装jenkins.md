@@ -7,7 +7,7 @@ author:     eddie
 header-img: img/home-bg-o.jpg
 catalog: true
 tags:
-    - linux
+    - docker-compose
 ---
   
 ```

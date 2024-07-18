@@ -10,25 +10,25 @@ tags:
     - k8s
 ---
 
-#
-**kubernetes实战篇之创建configmap**
+# **kubernetes实战篇之创建configmap**
+
 
 ConfigMap是k8s的一个配置管理组件，可以将配置以key-value的形式传递，或者文件形式，通常用来保存不需要加密的配置信息，加密信息则需用到Secret，主要用来应对以下场景：
 
-&ensp; &ensp; 1. 生成为容器内的环境变量；
+#### &ensp; &ensp; 1. 生成为容器内的环境变量；
 
-&ensp; &ensp; 2. 设置容器启动命令的启动参数（需设置为环境变量）
+#### &ensp; &ensp; 2. 设置容器启动命令的启动参数（需设置为环境变量）
 
-&ensp; &ensp; 3. 以Volume的形式挂载为容器内部的文件或目录。
+#### &ensp; &ensp; 3. 以Volume的形式挂载为容器内部的文件或目录。
 
 
 
-###
-**一：configmap类型**
+### ****一：configmap类型****
 
-&ensp; &ensp; &ensp; &ensp; 1. data类型：传递数据
 
-&ensp; &ensp; &ensp; &ensp; 2. binaryData类型：使用二进制传递数据
+#### &ensp; &ensp; &ensp; &ensp; 1. data类型：传递数据
+
+#### &ensp; &ensp; &ensp; &ensp; 2. binaryData类型：使用二进制传递数据
 
 ```
 kubectl explain cm

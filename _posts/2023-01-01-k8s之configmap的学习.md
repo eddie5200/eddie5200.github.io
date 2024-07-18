@@ -23,6 +23,7 @@ ConfigMap是k8s的一个配置管理组件，可以将配置以key-value的形�
 
 
 
+
 ### ****一：configmap类型****
 
 

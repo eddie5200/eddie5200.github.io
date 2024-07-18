@@ -23,7 +23,7 @@ tags:
 
 ## 二：GTID的优缺点
 
-### 优点
+ &ensp; &ensp; 1. 优点
 ```
 1. 根据 GTID 可以快速的确定事务最初是在哪个实例上提交的。
 2. 更简单的搭建主从复制，确保每个事务只会被执行一次。
@@ -33,7 +33,7 @@ tags:
 6. 减少手工干预和降低服务故障时间，当主机挂了之后通过软件从众多的备机中提升一台备机为主机
 ```
 
-### 缺点
+ &ensp; &ensp; 2.缺点
 ```
 1. 主从库的表存储引擎必须是一致的
 2. 不允许一个SQL同时更新一个事务引擎和非事务引擎的表
@@ -51,7 +51,7 @@ tags:
 
 ## 四：搭建GTID主从复制
 
-### master配置
+ &ensp; &ensp; 1. master配置
 ```
 vim /etc/my.cnf    //在[mysqld]下添加如下内容
 server-id=1
@@ -66,7 +66,7 @@ mysql> grant replication slave,reload,super on *.*  to 'slave'@'%' identified by
 mysql> flush privileges;
 ```
 
-### slave配置
+ &ensp; &ensp; 2. slave配置
 ```
 [root@mysql-slave ~]# vim /etc/my.cnf    //[mysqld]添加如下配置
 server-id=2    //server-id每台服务器都不能一样，用于标识不同的MySQL服务器实例
@@ -118,14 +118,14 @@ mysql> show slave status\G  #查看状态，验证sql和IO是不是yes。
 
 ## 六：异常处理
 
-### GTID主从异常报错1236
+####  GTID主从异常报错1236
 
 ```
  Last_IO_Error: Got fatal error 1236 from master when reading data from binary log: 'The slave is connecting using CHANGE MASTER TO MASTER_AUTO_POSITION = 1, but the master has purged binary logs containing GTIDs that the slave requires. Replicate the missing transactions from elsewhere, or provision a new slave from backup. Consider increasing the master's binary log expiration period. The GTID set sent by the slave is '', and the missing transactions are '6c15ecda-03f3-11ec-987e-6c92bff6906b:1-5,
 a75b06d9-03ec-11ec-9ca3-6c92bff6a8fb:1-6'.'
 ```
 
-### 解决办法
+####  解决办法
 1. 在主节点执行
 ```
 show variables like '%gtid_purged%';

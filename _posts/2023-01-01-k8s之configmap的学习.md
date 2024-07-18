@@ -15,11 +15,11 @@ tags:
 
 ConfigMap是k8s的一个配置管理组件，可以将配置以key-value的形式传递，或者文件形式，通常用来保存不需要加密的配置信息，加密信息则需用到Secret，主要用来应对以下场景：
 
-#### &ensp; &ensp; 1. 生成为容器内的环境变量；
+ &ensp; &ensp; 1. 生成为容器内的环境变量；
 
-#### &ensp; &ensp; 2. 设置容器启动命令的启动参数（需设置为环境变量）
+ &ensp; &ensp; 2. 设置容器启动命令的启动参数（需设置为环境变量）
 
-#### &ensp; &ensp; 3. 以Volume的形式挂载为容器内部的文件或目录。
+&ensp; &ensp; 3. 以Volume的形式挂载为容器内部的文件或目录。
 
 
 
@@ -50,8 +50,8 @@ kubectl explain cm
 
 
 
-###
-**二：configmap创建**
+### **二：configmap创建**
+
 
 
 &ensp; &ensp; 1. **--from-file:通过普通文件创建**
@@ -120,8 +120,8 @@ data:
   cache_host: localhost
  ```
 
- ###
-**三：configmap合并**
+ ### **三：configmap合并**
+
 ```
 mkdir nginx-conf && cd nginx-conf
 # 主配置文件 
@@ -161,8 +161,8 @@ kubectl create configmap nginx-conf --from-file=nginx-conf/
 ```
 
 
-###
-**三：在Pod中使用configmap**
+### **四：在Pod中使用configmap**
+
 
 
 &ensp; &ensp;1. **通过环境变量的env方式，直接定义变量，传递给pod**

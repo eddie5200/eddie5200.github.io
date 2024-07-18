@@ -55,7 +55,7 @@ kubectl explain cm
 
 
 
-&ensp; &ensp; 1. **--from-file:通过普通文件创建**
+#### &ensp; &ensp; 1. **--from-file:通过普通文件创建**
 ```
 单个文件导入
 kubectl create configmap cm-test1 --from-file=./test1.conf -n your-namespace
@@ -64,7 +64,7 @@ kubectl create configmap cm-test1 --from-file=./test1.conf -n your-namespace
 kubectl create configmap cm-test1-test2 --from-file=./test1.conf --from-file=./test2.conf  -n your-namespace
 ```
 
-&ensp; &ensp; 2. **--from-file:通过目录创建**
+#### &ensp; &ensp; 2. **--from-file:通过目录创建**
 ```
 [root@node1 ~]# mkdir config
 [root@node1 ~]# echo hello > config/hello.txt
@@ -73,25 +73,25 @@ kubectl create configmap cm-test1-test2 --from-file=./test1.conf --from-file=./t
 [root@node1 ~]# kubectl create cm test-configmap --from-file=/root/config -n your-namespace
 ```
 
-&ensp; &ensp; 3. **--from-file:通过自定义数据源创建** 
+#### &ensp; &ensp; 3. **--from-file:通过自定义数据源创建** 
 ```
  kubectl create configmap cm-data --from-file=test-cm-define=/etc/yum.repos.d/local.repo  -n configmap
 
 ```
 
 
-&ensp; &ensp; 4. **--from-env-file='' 以环境变量专用文件的方式配置数据** 
+#### &ensp; &ensp; 4. **--from-env-file='' 以环境变量专用文件的方式配置数据** 
 ```
 kubectl create configmap cm-env --from-env-file=./test.env 
 ```
 
 
-&ensp; &ensp; 5.  **--from-literal:通过从字符集创建**
+#### &ensp; &ensp; 5.  **--from-literal:通过从字符集创建**
 ```
  kubectl create cm test-configmap --from-literal=user=admin --from-literal=password=123456 -n your-namespace
  ```
 
- &ensp; &ensp; 6. **yaml:通过yaml文件,文件格式创建**
+ #### &ensp; &ensp; 6. **yaml:通过yaml文件,文件格式创建**
  
  ```
  ---
@@ -111,7 +111,7 @@ metadata:
   namespace: configmap
 ```
 
- &ensp; &ensp; 4. yaml:通过yaml文件,是Key/value格式创建
+####  &ensp; &ensp; 7. yaml:通过yaml文件,是Key/value格式创建
  ```
 apiVersion: v1
 kind: ConfigMap
@@ -166,7 +166,7 @@ kubectl create configmap nginx-conf --from-file=nginx-conf/
 
 
 
-&ensp; &ensp;1. **通过环境变量的env方式，直接定义变量，传递给pod**
+#### &ensp; &ensp;1. **通过环境变量的env方式，直接定义变量，传递给pod**
 <br>
 &ensp; &ensp; &ensp; &ensp;环境变量是容器启动时注入的，不会随CM更改而发生变化
 ```
@@ -194,7 +194,7 @@ EOF
 ```
 
 
-&ensp; &ensp;2. **通过环境变量env的方式，configMapKeyRef，传递给pod**
+#### &ensp; &ensp;2. **通过环境变量env的方式，configMapKeyRef，传递给pod**
 ```
 cat >configmap-env-test.yml<<'EOF'
 apiVersion: v1
@@ -230,7 +230,7 @@ EOF
 ```
 
 
-&ensp; &ensp;3. **通过环境变量envFrom的方式，configMapRef，传递给pod**
+#### &ensp; &ensp;3. **通过环境变量envFrom的方式，configMapRef，传递给pod**
 ```
 cat >configmap-envfrom-test.yml<<'EOF'
 apiVersion: v1
@@ -259,7 +259,7 @@ root@configmap-envfrom-test:/# echo $NGINX_PORT $NGINX_USER
 10086 www
 ```
 
-&ensp; &ensp;4. **${var_name}参数变量，传递给pod**
+#### &ensp; &ensp;4. **${var_name}参数变量，传递给pod**
 ```
 cat >command-pod.yml<<'EOF'
 apiVersion: v1
@@ -289,7 +289,7 @@ EOF
 ```
 
 
-&ensp; &ensp;5. **数据卷，传递给pod**
+#### &ensp; &ensp;5. **数据卷，传递给pod**
 ```
 cat > redis-configmap.yml<<'EOF'
 apiVersion: v1
